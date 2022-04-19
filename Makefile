@@ -7,3 +7,6 @@ up:
 
 down:
 	docker-compose down --remove-orphans
+
+test:
+	npm test
