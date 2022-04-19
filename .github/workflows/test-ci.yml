@@ -1,0 +1,29 @@
+name: validate pull request
+
+on:
+  pull_request
+
+jobs:
+
+  validate:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+      - run: echo "Running build and test for ${{ github.ref }} branch"
+        uses: actions/checkout@v2
+
+      - name: Setup nodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: Installing dependencies
+        run: make install
+
+      # - name: Running lint
+      #   run: make lint
+
+      - name: Running test
+        run: make test

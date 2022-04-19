@@ -20,13 +20,3 @@ module.exports = Object.freeze(Object.assign({}, {
         client.close();
     }
 }));
-
-
-
-
-
-
-
-// const redisPort = 6379
-
-// client.connect();

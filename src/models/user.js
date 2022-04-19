@@ -3,6 +3,8 @@ const mongo = require('../libs/client/mongo');
 
 class User {
 
+    //a3e61e61-2629-435d-9b88-94ff062f8590
+
     async getById(id) {    
         try {
             const mongoDB = await mongo.connect();
@@ -48,6 +50,7 @@ class User {
         try {
             return await mongoDB.collection('users').deleteMany({});
         } catch (err) {
+            console.err(err);
             throw err;
         } finally {
             mongo.close();
@@ -55,7 +58,7 @@ class User {
     }
 
     setUserId(user) {
-        user.id = uuidv4(); //use _id or a new property id????
+        user.id = uuidv4(); //TODO: use _id or a new property id????
     }
 
 }
