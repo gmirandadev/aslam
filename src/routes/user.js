@@ -9,7 +9,7 @@ module.exports = (router) => {
             if (result) {
                 res.status(200).json(result);
             } else {
-                res.status(404).send(`Not found user with ${req.params.id}`);
+                res.status(404).send(sanitizeHtml(`Not found user with ${req.params.id}`));
             }
         } catch (err) {
             res.send('Failed');

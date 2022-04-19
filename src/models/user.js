@@ -1,6 +1,6 @@
 const { v4: uuidv4 } = require('uuid'); 
 const mongo = require('../libs/client/mongo');
-
+const sanitizeHtml = require('sanitize-html');
 class User {
 
     //a3e61e61-2629-435d-9b88-94ff062f8590
