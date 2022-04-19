@@ -3,7 +3,6 @@
 
 ![aslam12](https://user-images.githubusercontent.com/15850886/163889740-5bd48053-7fb6-452e-a9a0-ed673de2c61c.jpeg)
 
-
 ## Architecture
 This API consists of a node application that read/write data from mongodb database.
 
@@ -41,10 +40,6 @@ To down the application just run:
 ```
 make down
 ```
-
-**Important** to use `/render/send` in development correctly, make sure you have the AWS credentials in enviroment.
-
-If `/render/send` returns a response with `statusCode: 500` , your message/email will be reprocessed, so consider ignoring this as an error.
 
 ## How to Test
 ```
