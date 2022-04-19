@@ -22,8 +22,5 @@ jobs:
       - name: Installing dependencies
         run: make install
 
-      # - name: Running lint
-      #   run: make lint
-
       - name: Running test
         run: make test
